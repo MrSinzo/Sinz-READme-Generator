@@ -119,7 +119,7 @@ ${Description}\n
 ## Installation:
 ${Installation}\n
 ## Usage:
-![Video Tutorial](video tut link go here)
+![Video Tutorial](video tut link go here)\n
 ${Usage}\n
 ## License:
 ${License}\n

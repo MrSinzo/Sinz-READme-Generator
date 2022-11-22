@@ -1,8 +1,8 @@
 
-# 16thMD
-[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)
+# 18thMD
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Description:
-Testing other license badges to make sure they work 
+fixing a typo and checking if it worked
 
 ## Table of Contents
 ### Installation
@@ -13,29 +13,30 @@ Testing other license badges to make sure they work
 ### Questions
 
 ## Installation:
-carefully
+just dont
 
 ## Usage:
 ![Video Tutorial](video tut link go here)
-To get stressed
+
+who
 
 ## License:
-The ISC License
+The MIT License
 
 ## Contribution:
-The drunk guy
+gives
 
 ## Tests:
-your mom tests my patience
+a
 
 ## Questions:
-Has your dad always had a tail?
+f
 
 If you have any questions, bug reports / Screenshots your concerned about,
 please contact me through one of these two methods:
 
 ### Github Link
-https://github.com/Punky
+https://github.com/douche
 
 ### Email
-PunkyMonkey
+bag
