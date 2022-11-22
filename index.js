@@ -106,7 +106,7 @@ inquirer
     }) => {
       const templateLiterall = `
 # ${Title}
-![License Img](${renderLicenseBadge(License)})
+${renderLicenseBadge(License)}
 ## Description:
 ${Description}\n
 ## Table of Contents
@@ -161,9 +161,9 @@ function renderLicenseBadge(License) {
   if (licenseType === "The MIT License") {
     return yourLicense = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
   } else if (licenseType === "The ISC License") {
-    return yourLicense = `[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)`;
-  } else if (licenseType === "The wtfpl License") {
     return yourLicense = `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)`;
+  } else if (licenseType === "The wtfpl License") {
+    return yourLicense = `[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)`;
   } else {
     return yourLicense = "None";
   }
