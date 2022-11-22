@@ -10,7 +10,7 @@ function renderLicenseBadge(license) {
   } else if (licenseType === "The wtfpl License"){
     yourLicense = `![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)`
   } else {
-    yourLicense = "None"
+    yourLicense = ""
   } 
   return yourLicense;
 }
