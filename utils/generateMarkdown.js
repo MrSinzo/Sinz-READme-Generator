@@ -16,8 +16,8 @@
 
 // function renderLicenseBadge(license) 
 function renderLicenseBadge(License) {
-  // let licenseType =`${License}`
-  let licenseType = License
+  let licenseType =`${License}`
+  // let licenseType = License
   // let licenseType = license.data.license[0]
   // let licenseType = ["The MIT License", "The ISC License", "The wtfpl License"];
   let yourLicense = "";

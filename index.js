@@ -19,7 +19,7 @@ inquirer
         if (value) {
           return true;
         } else {
-          return " I need a title name to continue!";
+          return "I need a title name to continue!";
         }
       },
     },
@@ -31,7 +31,7 @@ inquirer
         if (value) {
           return true;
         } else {
-          return " I need a description to continue!";
+          return "I need a description to continue!";
         }
       },
     },
@@ -106,7 +106,7 @@ inquirer
     }) => {
       const templateLiterall = `
 # ${Title}
-![License Img](${generateMarkdown})
+![License Img](${renderLicenseBadge(License)})
 ## Description:
 ${Description}\n
 ## Table of Contents
@@ -152,7 +152,22 @@ function createNewFile(myREADME, templateLiterall) {
   );
 }
 
-
+function renderLicenseBadge(License) {
+  let licenseType =`${License}`
+  // let licenseType = License
+  // let licenseType = license.data.license[0]
+  // let licenseType = ["The MIT License", "The ISC License", "The wtfpl License"];
+  let yourLicense = "";
+  if (licenseType === "The MIT License") {
+    return yourLicense = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+  } else if (licenseType === "The ISC License") {
+    return yourLicense = `[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)`;
+  } else if (licenseType === "The wtfpl License") {
+    return yourLicense = `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)`;
+  } else {
+    return yourLicense = "None";
+  }
+}
 
 //*****TODO: Create a function to write README file
 /**original snippet from class **/
