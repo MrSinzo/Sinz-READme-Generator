@@ -3,7 +3,7 @@
 // const { default: inquirer } = require("inquirer");
 const inquirer = require("inquirer");
 const fs = require("fs");
-// const generateMarkdown = require("./utils/generateMarkdown");
+const generateMarkdown = require("./utils/generateMarkdown");
 // const generateMarkdown = require('generateMarkdown')
 
 //*****TODO: Create an array of questions for user input
@@ -106,7 +106,7 @@ inquirer
     }) => {
       const templateLiterall = `
 # ${Title}
-![License Img](${renderLicenseBadge()})
+![License Img](${generateMarkdown})
 ## Description:
 ${Description}\n
 ## Table of Contents
@@ -152,23 +152,7 @@ function createNewFile(myREADME, templateLiterall) {
   );
 }
 
-function renderLicenseBadge() {
-  // let licenseType =`${License}`
-  // let licenseType = license.License
-  // let licenseType = license.data.license[0]
-  let licenseType = ["The MIT License", "The ISC License", "The wtfpl License"];
-  let yourLicense = "";
-  if (licenseType === "The MIT License") {
-    yourLicense = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
-  } else if (licenseType === "The ISC License") {
-    yourLicense = `[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)`;
-  } else if (licenseType === "The wtfpl License") {
-    yourLicense = `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)`;
-  } else {
-    yourLicense = "None";
-  }
-  return yourLicense;
-}
+
 
 //*****TODO: Create a function to write README file
 /**original snippet from class **/
