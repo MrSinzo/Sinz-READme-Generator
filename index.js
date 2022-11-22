@@ -99,23 +99,24 @@ inquirer
       Questions,
       Repo,
       Email,
+      /**original snippet from class **/
       // console.info("Answers:", answers);
     }) => {
       const templateLiterall = `
 # ${Title}
-* ## Table of Contents
-* ### Description
-* ### Installation
-* ### Usage
-* ### License
-* ### Contribution
-* ### Tests
-* ### Questions
 ## Description:
 ${Description}\n
+## Table of Contents
+### Installation
+### Usage
+### License
+### Contribution
+### Tests
+### Questions\n
 ## Installation:
 ${Installation}\n
 ## Usage:
+![Video Tutorial](video tut link go here)
 ${Usage}\n
 ## License:
 ${License}\n
@@ -125,9 +126,11 @@ ${Contribution}\n
 ${Tests}\n
 ## Questions:
 ${Questions}\n
-## Github Link
+If you have any questions, bug reports / Screenshots your concerned about,
+please contact me through one of these two methods:\n
+### Github Link
 https://github.com/${Repo}\n
-## Email
+### Email
 ${Email};
 `;
       createNewFile(Title, templateLiterall);
@@ -153,10 +156,12 @@ function createNewFile(myREADME, templateLiterall) {
 
 // function writeToFile('myReadme.md', answers, (err)=>
 // err ? console.error(err) : console.log('Success!')) {}
+
 /**original snippet from class **/
 // fs.writeFile('log.txt', process.argv[2], (err) =>
 //   err ? console.error(err) : console.log('Success!')
 // );
+
 /**original snippet from class **/
 // fs.readFile("data.csv", "utf8", (error, data) =>
 //   error ? console.error(error) : console.log(data)
