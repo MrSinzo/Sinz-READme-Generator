@@ -111,7 +111,8 @@ ${Description}\n
 ## Installation:
 ${Installation}\n
 ## Usage:
-![Video Tutorial](video tut link go here)\n
+![Screenshots of your Application can go here!](Screenshot filepath go here)\n
+![Video tutorial Links can go here!](video URL go here)\n
 ${Usage}\n
 ## License:
 ${License}\n
