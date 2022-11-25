@@ -1,14 +1,8 @@
-//*****TODO: Include packages needed for this application
-/**original snippet from class**/
-// const { default: inquirer } = require("inquirer");
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateMarkdown = require("./utils/generateMarkdown");
-// const generateMarkdown = require('generateMarkdown')
+// const generateMarkdown = require("./utils/generateMarkdown"); // Module export not working. Disabling until it can be debugged
 
-//*****TODO: Create an array of questions for user input
-/**original snippet from class **/
-// const questions = [];
+/**Questions to ask the user */
 inquirer
   .prompt([
     {
@@ -101,8 +95,6 @@ inquirer
       Questions,
       Repo,
       Email,
-      /**original snippet from class **/
-      // console.info("Answers:", answers);
     }) => {
       const templateLiterall = `
 # ${Title}
@@ -123,7 +115,7 @@ ${Installation}\n
 ${Usage}\n
 ## License:
 ${License}\n
-${renderLicenseLink(License)}
+You can check out the specifics of the license here! : ${renderLicenseLink(License)}
 ## Contribution:
 ${Contribution}\n
 ## Tests:
@@ -131,7 +123,7 @@ ${Tests}\n
 ## Questions:
 ${Questions}\n
 If you have any questions, bug reports / Screenshots your concerned about,
-please contact me through one of these two methods:\n
+please contact me through my Github or my Email:\n
 ### Github Link
 https://github.com/${Repo}\n
 ### Email
@@ -152,66 +144,33 @@ function createNewFile(myREADME, templateLiterall) {
     }
   );
 }
+/**Function to grab/display correct badge when license is choosen */
 
 function renderLicenseBadge(License) {
-  let licenseType =`${License}`
-  // let licenseType = License
-  // let licenseType = license.data.license[0]
-  // let licenseType = ["The MIT License", "The ISC License", "The wtfpl License"];
+  let licenseType = `${License}`;
   let yourLicense = "";
   if (licenseType === "The MIT License") {
-    return yourLicense = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+    return (yourLicense = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`);
   } else if (licenseType === "The ISC License") {
-    return yourLicense = `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)`;
+    return (yourLicense = `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)`);
   } else if (licenseType === "The wtfpl License") {
-    return yourLicense = `[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)`;
+    return (yourLicense = `[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)`);
   } else {
-    return yourLicense = "None";
+    return (yourLicense = "");
   }
 }
 
-
+/**Function to use/display correct link when license is choosen */
 function renderLicenseLink(License) {
-  let licenseLink = `${License}`
-  let yourLicenseLink = ""
-  if (licenseLink === "The MIT License" ) {
-    return yourLicenseLink = "https://opensource.org/licenses/MIT"
+  let licenseLink = `${License}`;
+  let yourLicenseLink = "";
+  if (licenseLink === "The MIT License") {
+    return (yourLicenseLink = "https://opensource.org/licenses/MIT");
   } else if (licenseLink === "The ISC License") {
-    return yourLicenseLink = 'https://opensource.org/licenses/ISC'
+    return (yourLicenseLink = "https://opensource.org/licenses/ISC");
   } else if (licenseType === "The wtfpl License") {
-    yourLicenseLink = 'http://www.wtfpl.net/about/'
+    yourLicenseLink = "http://www.wtfpl.net/about/";
   } else {
-    return yourLicenseLink = ""
+    return (yourLicenseLink = "");
   }
 }
-//*****TODO: Create a function to write README file
-/**original snippet from class **/
-// function writeToFile(fileName, data) {}
-
-// function writeToFile('myReadme.md', answers, (err)=>
-// err ? console.error(err) : console.log('Success!')) {}
-
-/**original snippet from class **/
-// fs.writeFile('log.txt', process.argv[2], (err) =>
-//   err ? console.error(err) : console.log('Success!')
-// );
-
-/**original snippet from class **/
-// fs.readFile("data.csv", "utf8", (error, data) =>
-//   error ? console.error(error) : console.log(data)
-// );
-
-// fs.readFile("generateMarkdown.js", "utf8", (error, data) =>
-// error ? console.error(error) : console.log(data)
-// );
-
-// fs.writeFile('myReadme.md', answers, (error) =>
-//   error ? console.error(error) : console.log('Success!')
-// );
-
-// TODO: Create a function to initialize app
-// function init() {
-// }
-
-// Function call to initialize app
-// init();
