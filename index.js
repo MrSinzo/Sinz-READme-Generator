@@ -123,6 +123,7 @@ ${Installation}\n
 ${Usage}\n
 ## License:
 ${License}\n
+${renderLicenseLink(License)}
 ## Contribution:
 ${Contribution}\n
 ## Tests:
@@ -169,6 +170,20 @@ function renderLicenseBadge(License) {
   }
 }
 
+
+function renderLicenseLink(License) {
+  let licenseLink = `${License}`
+  let yourLicenseLink = ""
+  if (licenseLink === "The MIT License" ) {
+    return yourLicenseLink = "https://opensource.org/licenses/MIT"
+  } else if (licenseLink === "The ISC License") {
+    return yourLicenseLink = 'https://opensource.org/licenses/ISC'
+  } else if (licenseType === "The wtfpl License") {
+    yourLicenseLink = 'http://www.wtfpl.net/about/'
+  } else {
+    return yourLicenseLink = ""
+  }
+}
 //*****TODO: Create a function to write README file
 /**original snippet from class **/
 // function writeToFile(fileName, data) {}
