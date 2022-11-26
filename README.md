@@ -28,8 +28,8 @@ We needed Node.js (version 16.18), a dependancy called Inquirer ( 8.2.4 version 
 The whole program was built in Javascript and uses the user's terminal to execute the program! the majority of the programs early days was spent testing to make sure the questions were actually sorting the user's input correctly and a couple of if...else if statements to make sure the license badges and links were being referenced respectivly to their origin.
 ## Screenshot of working application and URL link
 ![ScreenShot of Application](/sinz-readme-gen_LIVE.png)
-
-![Video tutorial Here!](https://drive.google.com/file/d/1XPmhJv3IoxSKJEj-NrwU-rKAh8hcvKNt/view?usp=sharing)
+Video Tutroial Found at this link below!
+https://drive.google.com/file/d/1XPmhJv3IoxSKJEj-NrwU-rKAh8hcvKNt/view?usp=sharing
 
 ## Credits and Licenses
 Using MIT License 
